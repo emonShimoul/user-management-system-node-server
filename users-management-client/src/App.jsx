@@ -28,9 +28,12 @@ function App() {
       },
       body: JSON.stringify(user),
     })
-      .then((res) => res.json)
+      .then((res) => res.json())
       .then((data) => {
-        console.log("inside post response", data);
+        console.log(data);
+        const newUsers = [...users, data];
+        setUsers(newUsers);
+        form.reset();
       });
   };
 
@@ -48,7 +51,7 @@ function App() {
       <div>
         {users.map((user) => (
           <p key={user.id}>
-            {user.name} : {user.email}
+            {user.id} : {user.name} : {user.email}
           </p>
         ))}
       </div>
