@@ -38,7 +38,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="text-center my-10">
       <h1>User Management System</h1>
       <h3>Numbers of users: {users.length}</h3>
       <form onSubmit={handleAddUser}>
@@ -49,13 +49,23 @@ function App() {
         <input type="submit" value="Add User" />
       </form>
       <div>
+        <span className="loading loading-spinner text-primary"></span>
+        <span className="loading loading-spinner text-secondary"></span>
+        <span className="loading loading-spinner text-accent"></span>
+        <span className="loading loading-spinner text-neutral"></span>
+        <span className="loading loading-spinner text-info"></span>
+        <span className="loading loading-spinner text-success"></span>
+        <span className="loading loading-spinner text-warning"></span>
+        <span className="loading loading-spinner text-error"></span>
+      </div>
+      <div>
         {users.map((user) => (
           <p key={user.id}>
             {user.id} : {user.name} : {user.email}
           </p>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
