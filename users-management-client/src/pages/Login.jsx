@@ -37,8 +37,8 @@ const Login = () => {
 
   return (
     <div className="text-center my-10">
-      <h1>User Management System</h1>
-      <h3>Numbers of users: {users.length}</h3>
+      <h1 className="mb-8">User Management System</h1>
+      <h3>User Login</h3>
       <form onSubmit={handleAddUser}>
         <input type="text" name="name" id="" />
         <br />
